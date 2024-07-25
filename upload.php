@@ -1,3 +1,14 @@
+<?php
+  if($_SERVER['REQUEST_METHOD'] == "POST")
+  {
+    $file_name = $_FILES['upload_file']['name'];
+    $file_type = $_FILES['upload_file']['type'];
+    $file_size = $_FILES['upload_file']['size'];
+    $file_tmp_name = $_FILES['upload_file']['tmp_name'];
+    $file_error = $_FILES['upload_file']['error'];
+  }
+?>
+
 <html>
   <body>
     <?php if($_SERVER['REQUEST_METHOD'] == "POST"){ ?>
